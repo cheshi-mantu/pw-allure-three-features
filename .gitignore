@@ -5,6 +5,5 @@
 /playwright-report/**
 .DS_Store
 .vscode
-pnpm-lock.yaml
 history.jsonl
 test-results/.last-run.json
