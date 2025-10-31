@@ -1,0 +1,89 @@
+name: Build Allure Report
+
+on: 
+  # push: 
+  #   branches:
+  #     - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+
+jobs:
+  preps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: corepack enable pnpm
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install playwright
+        run: pnpm exec playwright install
+
+      - name: Install playwright deps
+        run: pnpm exec playwright install-deps
+
+  build-allure-report-v3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Generate Allure Report
+        run: | 
+          pnpm allure run --config=./allurerc.mjs -- pnpm test
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report-v3
+          path: allure-report/
+  aggregate: 
+      runs-on: ubuntu-latest
+      needs: [ build-allure-report-v3 ]
+      steps:
+
+        - name: Download Allure Report V3
+          uses: actions/download-artifact@v4
+          with:
+            name: allure-report-v3
+            path: allure-report/v3
+        # - name: Download Allure Report XCResults
+        #   uses: actions/download-artifact@v4
+        #   with:
+        #     name: allure-report-xcresults
+        #     path: allure-report/xcresults
+        - name: Copy index.html to root
+          run: cp index.html allure-report/
+        - name: Upload Allure Report
+          id: deployment
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: allure-report/
+  deploy:
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+      runs-on: ubuntu-latest
+      needs: [ aggregate ]
+      steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4
