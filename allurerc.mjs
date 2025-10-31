@@ -49,7 +49,7 @@ export default defineConfig({
     rules: [
       {
         maxFailures: 1,
-        fastFail: true,
+        fastFail: true
       },
     ],
   },

@@ -16,6 +16,13 @@ pnpm allure run --config=./allurerc.mjs -- pnpm test
 
 ```
 
+## open report
+
+```shell
+pnpm allure open
+```
+
+
 ## Clear reports from Jira
 
 ```shell
