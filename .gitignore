@@ -1,1 +1,10 @@
 **/node_modules
+**/test_results
+**/allure-results
+/allure-report/**
+/playwright-report/**
+.DS_Store
+.vscode
+pnpm-lock.yaml
+history.jsonl
+test-results/.last-run.json
