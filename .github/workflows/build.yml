@@ -1,16 +1,21 @@
-name: Build Allure Report
+name: Build and Deploy Allure Report
 
 on: 
-  # push: 
-  #   branches:
-  #     - master
+  push: 
+    branches:
+      - main
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build-allure-report:
@@ -43,21 +48,21 @@ jobs:
       - name: Install allure3
         run: pnpm install allure
 
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
       - name: Generate Allure Report
         run: | 
           pnpm allure run --config=./allurerc.mjs -- pnpm test
           ls -la ./allure-report
 
-      - name: Upload Allure Report
-        uses: actions/upload-artifact@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: allure-report-v3
-          path: allure-report/
+          path: './allure-report'
+
   deploy:
+      needs: build-allure-report
       environment:
         name: github-pages
         url: ${{ steps.deployment.outputs.page_url }}
