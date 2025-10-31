@@ -40,6 +40,9 @@ jobs:
       - name: Install playwright deps
         run: pnpm exec playwright install-deps
 
+      - name: Install allure3
+        run: pnpm install allure
+
   build-allure-report-v3:
     runs-on: ubuntu-latest
     steps:
