@@ -4,6 +4,8 @@
 pnpm install --frozen-lockfile
 
 pnpm exec playwright install
+
+pnpm install allure
 ```
 
 ## Run tests

@@ -50,40 +50,19 @@ jobs:
       - name: Generate Allure Report
         run: | 
           pnpm allure run --config=./allurerc.mjs -- pnpm test
+          ls -la ./allure-report
+
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report-v3
           path: allure-report/
-  aggregate: 
-      runs-on: ubuntu-latest
-      needs: [ build-allure-report-v3 ]
-      steps:
-
-        - name: Download Allure Report V3
-          uses: actions/download-artifact@v4
-          with:
-            name: allure-report-v3
-            path: allure-report/v3
-        # - name: Download Allure Report XCResults
-        #   uses: actions/download-artifact@v4
-        #   with:
-        #     name: allure-report-xcresults
-        #     path: allure-report/xcresults
-        - name: Copy index.html to root
-          run: cp index.html allure-report/
-        - name: Upload Allure Report
-          id: deployment
-          uses: actions/upload-pages-artifact@v3
-          with:
-            path: allure-report/
-  deploy:
-      environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
-      runs-on: ubuntu-latest
-      needs: [ aggregate ]
-      steps:
-        - name: Deploy to GitHub Pages
-          id: deployment
-          uses: actions/deploy-pages@v4
+  # deploy:
+  #     environment:
+  #       name: github-pages
+  #       url: ${{ steps.deployment.outputs.page_url }}
+  #     runs-on: ubuntu-latest
+  #     steps:
+  #       - name: Deploy to GitHub Pages
+  #         id: deployment
+  #         uses: actions/deploy-pages@v4
