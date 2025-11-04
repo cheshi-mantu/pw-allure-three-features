@@ -71,9 +71,17 @@ export default defineConfig({
         layout: defaultChartsConfig,
       },
     },
+    csv: {
+      options: {
+        fileName: "allure-report.csv",
+        filter: false
+      }
+    },
     log: {
       options: {
-        groupBy: "none",
+        groupBy: "feature",
+        withTrace: false,
+        allSteps: false
       },
     }
   },

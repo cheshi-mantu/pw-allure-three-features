@@ -10,7 +10,6 @@ pnpm install allure
 
 ## Run tests
 
-
 ```shell
 pnpm allure run --config=./allurerc.mjs -- pnpm test
 
@@ -21,6 +20,37 @@ pnpm allure run --config=./allurerc.mjs -- pnpm test
 ```shell
 pnpm allure open
 ```
+
+## Installing plugins
+
+### Log
+
+#### Add
+
+```shell
+pnpm add @allurereport/plugin-log
+```
+
+#### Run
+
+```shell
+allure log --config=./allurerc.mjs allure-results
+```
+
+### CSV
+
+#### Add
+
+```shell
+pnpm add @allurereport/plugin-csv
+```
+
+#### Run
+
+```shell
+allure csv --config=./allurerc.mjs allure-results
+```
+
 
 
 ## Clear reports from Jira

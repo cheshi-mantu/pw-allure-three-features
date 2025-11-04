@@ -14,6 +14,9 @@
     "allure-playwright": "^3.0.6"
   },
   "dependencies": {
+    "@allurereport/core": "3.0.0-beta.21",
+    "@allurereport/plugin-csv": "3.0.0-beta.21",
+    "@allurereport/plugin-log": "3.0.0-beta.21",
     "allure": "3.0.0-beta.21"
   }
 }
