@@ -51,6 +51,33 @@ pnpm add @allurereport/plugin-csv
 allure csv --config=./allurerc.mjs allure-results
 ```
 
+### Jira
+
+#### Add
+
+```shell
+```
+
+#### Run
+
+
+```shell
+```
+
+
+
+#### Add
+
+```shell
+```
+
+#### Run
+
+
+```shell
+```
+
+
 
 
 ## Clear reports from Jira

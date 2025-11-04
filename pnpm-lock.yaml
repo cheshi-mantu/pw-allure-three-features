@@ -14,6 +14,9 @@ importers:
       '@allurereport/plugin-csv':
         specifier: 3.0.0-beta.21
         version: 3.0.0-beta.21
+      '@allurereport/plugin-jira':
+        specifier: 3.0.0-beta.21
+        version: 3.0.0-beta.21
       '@allurereport/plugin-log':
         specifier: 3.0.0-beta.21
         version: 3.0.0-beta.21
