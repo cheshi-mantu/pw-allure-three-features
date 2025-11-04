@@ -71,6 +71,13 @@ export default defineConfig({
         layout: defaultChartsConfig,
       },
     },
+        jira: {
+      options: {
+        issue: "ARFJ-3",
+        uploadReport: true,
+        uploadResults: true
+      },
+    },
     csv: {
       options: {
         fileName: "allure-report.csv",
