@@ -7,3 +7,4 @@
 .vscode
 history.jsonl
 test-results/.last-run.json
+allure.csv/
