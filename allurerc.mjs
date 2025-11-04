@@ -73,7 +73,9 @@ export default defineConfig({
     },
         jira: {
       options: {
-        issue: "ARFJ-3",
+        issue: "ARFJ-4",
+        webhook: process.env.ALLURE_JIRA_WEBHOOK,
+        token: process.env.ALLURE_JIRA_TOKEN,
         uploadReport: true,
         uploadResults: true
       },
@@ -81,7 +83,6 @@ export default defineConfig({
     csv: {
       options: {
         fileName: "allure-report.csv",
-        filter: false
       }
     },
     log: {

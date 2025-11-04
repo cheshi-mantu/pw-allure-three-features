@@ -64,6 +64,9 @@ allure csv --config=./allurerc.mjs allure-results
 ```shell
 ```
 
+#### Open
+
+https://qametasoftware.atlassian.net/browse/ARFJ-3
 
 
 #### Add
