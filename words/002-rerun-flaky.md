@@ -48,4 +48,4 @@ pnpm allure run --rerun 3 -- pnpm test
 ```
 
 
-[back to toc](!toc.md)
+[back to toc](!toc.md/#allure3-highlights)
