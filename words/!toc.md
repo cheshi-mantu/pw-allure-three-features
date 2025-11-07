@@ -1,7 +1,8 @@
 # Fighting the errors faster
 
 - It's a bloody report, that is built at the end of the pipeline!
-  - NOT ANYMORE, jajajaja 
+  - NOT ANYMORE, jajajaja
+
 				(laughs in Spanish)
 
 
