@@ -23,7 +23,7 @@ Today I'm starting a story about resolving test failures faster with Allure Repo
 			(laughs in Spanish)
 - Shall we?
 
-[Audience:] - expresses agreement in German. 
+[Audience:] - People express agreement in German.
 
 - Ja, Ja, Ja!
 
@@ -33,18 +33,15 @@ Today I'm starting a story about resolving test failures faster with Allure Repo
 
 1. [Hasten local development](001-local-development.md)
 2. [Hello Flaky](002-rerun-flaky.md)
-3. 
+3. [¡No pasarán!](003-stop-em.md)
 
+## from unpublished archives...
 
-
-
-## Don't want report now, then don't generate
+### Don't want report now, then don't generate
 
 ### Maybe you want logs only?
 
 ### Maybe you want CSV, not HTML report?
 
 ### Maybe you want dashboards only?
-
-
 

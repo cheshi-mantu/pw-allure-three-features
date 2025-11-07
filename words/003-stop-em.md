@@ -1,6 +1,6 @@
-# What if tests fail
+# What if tests fail but it's delivery time, dudes?
 
-![fine](fine.jpg)
+![fine](responsibility.jpg)
 
 ## Script
 
