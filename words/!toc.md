@@ -5,8 +5,7 @@
 
 				(laughs in Spanish)
 
-
-Report → Tool
+1. [Faster local development](001 local development.md)
 
 ## Don't want report now, then don't generate
 
@@ -19,5 +18,3 @@ Report → Tool
 
 
 ## Retry the failed tests automatically
-
-## 
