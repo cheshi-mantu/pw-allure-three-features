@@ -44,7 +44,7 @@ pnpm allure run --rerun 3 -- pnpm test
 
 ```shell\
 git checkout clusterFailure
-pnpm allure run --rerun 3 -- pnpm test
+pnpm allure run --config=./allurerc.mjs --rerun 3 -- pnpm test
 ```
 
 [back to toc](!toc.md/#allure3-highlights)

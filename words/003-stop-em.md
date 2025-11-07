@@ -6,24 +6,31 @@
 
 [Egor:]
 
-1. We changed the way tests are being executed.
-2. Allure3 does not appear at the end
+1. We are not limited by the watching of the tests status, we also can help taking actions
+2. We added quality gate to allure3
 
-## As it was
+## What I gotta do to stop 'em
 
-```shell
-pnpm test
-# install java to your JS/TS/pytest/whatever pipeline
-allure generate
-allure open
+```json
+  qualityGate: {
+    rules: [
+      {
+        maxFailures: 1,
+        fastFail: true
+      },
+    ],
+  },
 ```
 
 [Audience:] indistinct chatter...
 
-## As is
+[A horse snorts nervously in the darkness.]
+
+## Let's try
 
 ```shell
-pnpm allure run --rerun 3 -- pnpm test
+git checkout qg
+./run.sh
 
 ```
 
