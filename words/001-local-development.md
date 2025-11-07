@@ -6,7 +6,16 @@
 pnpm allure watch ./allure-results
 ```
 
-1. Watches results in real time
-2. Rebuilds the report in real time
-3. No more jumping between IDE and terminal\
+## Script
+
+[Egor:]
+
+1. Watches results in real time.
+2. Rebuilds the report in real time.
+3. No more jumping between IDE and terminal.
 4. Profit!11
+
+[Audience:]
+
+- Stop talking!
+- Show us the good stuff!!
