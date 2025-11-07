@@ -5,7 +5,7 @@
 
 				(laughs in Spanish)
 
-1. [Faster local development](001 local development.md)
+1. [Hasten local development](001-local-development.md)
 
 ## Don't want report now, then don't generate
 
