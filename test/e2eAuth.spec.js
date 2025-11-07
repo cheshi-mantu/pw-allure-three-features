@@ -22,7 +22,7 @@ test.afterEach(async () => {
   await allure.attachment("after each we attach text", "Party is over, my dudes", "text/plain");
 });
 
-test("Login Form - Valid Credentials @allure.id:14542", async() => {
+test("Login Form - Valid Credentials", async() => {
   await allure.epic("Authentication");
   await allure.tags("web", "regress", "smoke");
   await allure.feature("Built-in authentication");
@@ -44,7 +44,7 @@ test("Login Form - Valid Credentials @allure.id:14542", async() => {
   });
 });
 
-test("Login Form - Invalid Credentials @allure.id:14544", async() => {
+test("Login Form - Invalid Credentials", async() => {
   await allure.epic("Authentication");
   await allure.feature("Built-in authentication");
   await allure.story("Login form");
@@ -66,7 +66,7 @@ test("Login Form - Invalid Credentials @allure.id:14544", async() => {
   });
 });
 
-test("Login Form - Empty Fields @allure.id:14547", async() => {
+test("Login Form - Empty Fields", async() => {
   await allure.epic("Authentication");
   await allure.feature("Built-in authentication");
   await allure.story("Login form");

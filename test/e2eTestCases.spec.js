@@ -17,7 +17,7 @@ test.beforeEach(async () => {
   await allure.attachment("text attachment", "some data added to each test", "text/plain");
 });
 
-test("Test Case name cannot be longer than 255 characters @allure.id:14662", async () => {
+test("Test Case name cannot be longer than 255 characters", async () => {
   await allure.epic("Test Cases");
   await allure.feature("Managing test cases");
   await allure.story("Creation of test cases");

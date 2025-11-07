@@ -69,9 +69,13 @@ allure csv --config=./allurerc.mjs allure-results
 https://qametasoftware.atlassian.net/browse/ARFJ-3
 
 
+### Watch
+
 #### Add
 
 ```shell
+pnpm allure allure-results
+
 ```
 
 #### Run
