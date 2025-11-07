@@ -6,6 +6,9 @@
 				(laughs in Spanish)
 
 1. [Hasten local development](001-local-development.md)
+2. [Hello Flaky](002-rerun-flaky.md)
+3. 
+
 
 ## Don't want report now, then don't generate
 
@@ -17,4 +20,3 @@
 
 
 
-## Retry the failed tests automatically
