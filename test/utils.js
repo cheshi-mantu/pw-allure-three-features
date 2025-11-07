@@ -30,7 +30,7 @@ const isTimeToThrow = () => {
       "Element not found {selector: something}\n Expected: visible or transparent: visible or have css value opacity=0\n Timeout: 6000 ms"
     );
   }
-  if (failing > 0.98 && failing < 0.99) {
+  if (failing > 0.97 && failing < 0.98) {
     throw new Error("Test timeout of 30000ms exceeded.");
   }
 };

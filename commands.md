@@ -74,7 +74,7 @@ https://qametasoftware.atlassian.net/browse/ARFJ-3
 #### Add
 
 ```shell
-pnpm allure allure-results
+pnpm allure watch ./allure-results
 
 ```
 

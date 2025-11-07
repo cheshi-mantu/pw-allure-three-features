@@ -1,3 +1,5 @@
+./clean-results.sh
+
 pnpm allure run --config=./allurerc.mjs -- pnpm test
 
 if [ $? -ne 0 ]; then
