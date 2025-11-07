@@ -19,3 +19,16 @@ pnpm allure watch ./allure-results
 
 - Stop talking!
 - Show us the good stuff!!
+
+[Egor:]
+
+- But I have only 6 minutes!
+
+[Audience:]
+
+- Show us, or sod off!
+
+[Egor:][in a frightened manner]
+
+- All right, all right...
+
