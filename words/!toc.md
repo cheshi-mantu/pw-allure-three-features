@@ -1,4 +1,11 @@
-# Report → Tool
+# Fighting the errors faster
+
+- It's a bloody report, that is built at the end of the pipeline!
+  - NOT ANYMORE, jajajaja 
+				(laughs in Spanish)
+
+
+Report → Tool
 
 ## Don't want report now, then don't generate
 
