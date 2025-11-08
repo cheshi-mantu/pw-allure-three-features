@@ -15,12 +15,14 @@
   qualityGate: {
     rules: [
       {
-        maxFailures: 1,
+        maxFailures: 2,
         fastFail: true
       },
     ],
   },
 ```
+
+Or create your own rule!
 
 [Audience:] indistinct chatter...
 
