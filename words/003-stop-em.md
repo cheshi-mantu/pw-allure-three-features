@@ -31,19 +31,9 @@ Or create your own rule!
 ## Let's try
 
 ```shell
-git checkout qg
 ./run.sh
 
 ```
-
-[Egor:]
-
-- So, if during the execution some tests will fail, allure3 will request rerun of these tests.
-
-[Audience:]
-
-- Stop talking!
-- Show us the good stuff!!
 
 [NARRATOR:]
 
@@ -51,9 +41,10 @@ git checkout qg
 
 ## run
 
-```shell\
-git checkout clusterFailure
-pnpm allure run --rerun 3 -- pnpm test
+```shell
+git checkout qg
+./run.sh
+
 ```
 
 

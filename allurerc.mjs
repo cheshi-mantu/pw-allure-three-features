@@ -49,7 +49,7 @@ export default defineConfig({
   qualityGate: {
     rules: [
       {
-        maxFailures: 1,
+        maxFailures: 3,
         fastFail: true
       },
     ],
