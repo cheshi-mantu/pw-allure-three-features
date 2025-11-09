@@ -41,7 +41,11 @@ Today I'm starting a story about resolving test failures faster with Allure Repo
 
 ### Maybe you want logs only?
 
+### Maybe you want history only?
+
 ### Maybe you want CSV, not HTML report?
 
 ### Maybe you want dashboards only?
+
+### Add run details 
 
