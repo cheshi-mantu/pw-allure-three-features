@@ -7,6 +7,6 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-pnpm allure generate --config=./allurerc.mjs
+# pnpm allure generate --config=./allurerc.mjs
 
 pnpm allure open --config=./allurerc.mjs
