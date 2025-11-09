@@ -1,5 +1,4 @@
 import { defaultChartsConfig, defineConfig } from "allure";
-import os from 'os';
 
 const chartLayout = [
   {
@@ -96,8 +95,6 @@ export default defineConfig({
   },
   variables: {
     env_variable: "unknown",
-    os: os.platform(),
-    os_arch: os.arch() ,
     greeting: "¡Hola todos!"
   },
   environments: {

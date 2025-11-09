@@ -6,6 +6,13 @@
 pnpm allure watch ./allure-results
 ```
 
+## again and again
+
+```shell
+pnpm test
+```
+
+
 ## Script
 
 [Egor:]

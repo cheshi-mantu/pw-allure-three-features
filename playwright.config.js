@@ -1,4 +1,6 @@
 const { devices, defineConfig } = require("@playwright/test");
+import os from 'os';
+
 
 export default defineConfig({
   testDir: "./test",
@@ -16,6 +18,8 @@ export default defineConfig({
         },
         environmentInfo: {
           node_version: process.version,
+          os: os.platform(),
+          os_arch: os.arch()
         },
       },
     ],
