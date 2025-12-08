@@ -49,12 +49,13 @@ export default defineConfig({
     rules: [
       {
         maxFailures: 3,
-        fastFail: true
+        fastFail: true,
       },
     ],
   },
   plugins: {
-    awesome: {
+    awesomeAll: {
+      import: "@allurereport/plugin-awesome",
       options: {
         reportName: "Very genuine fake tests, no SMS",
         singleFile: false,
@@ -63,46 +64,81 @@ export default defineConfig({
         charts: chartLayout,
       },
     },
+    awesomeEpicProjects: {
+      import: "@allurereport/plugin-awesome",
+      options: {
+        reportName: "Epic Projects",
+        singleFile: false,
+        reportLanguage: "en",
+        open: false,
+        charts: chartLayout,
+        filter: ({ labels }) => labels.find(({ name, value }) => name === "epic" && value === "Projects"),
+      },
+    },
+    awesomeEpicTestCases: {
+      import: "@allurereport/plugin-awesome",
+      options: {
+        reportName: "Epic Test Cases",
+        singleFile: false,
+        reportLanguage: "en",
+        open: false,
+        charts: chartLayout,
+        filter: ({ labels }) => labels.find(({ name, value }) => name === "epic" && value === "Test Cases"),
+      },
+    },
+    awesomeJava: {
+      import: "@allurereport/plugin-awesome",
+      options: {
+        reportName: "Java Tests",
+        singleFile: false,
+        reportLanguage: "en",
+        open: false,
+        charts: chartLayout,
+        filter: ({ labels }) => labels.find(({ name, value }) => name === "language" && value === "java"),
+      },
+    },
     dashboard: {
       options: {
         singleFile: false,
-        reportName: "Test run dasboard, no SMS",
+        reportName: "Test run dashboard, no SMS",
         reportLanguage: "en",
         layout: defaultChartsConfig,
       },
     },
-        jira: {
+    jira: {
       options: {
         issue: "ARFJ-4",
         webhook: process.env.ALLURE_JIRA_WEBHOOK,
         token: process.env.ALLURE_JIRA_TOKEN,
         uploadReport: true,
-        uploadResults: true
+        uploadResults: true,
       },
     },
     csv: {
       options: {
         fileName: "allure-report.csv",
-      }
+      },
     },
     log: {
       options: {
         groupBy: "feature",
         withTrace: false,
-        allSteps: false
+        allSteps: false,
       },
-    }
+    },
   },
   variables: {
     env_variable: "unknown",
-    greeting: "¡Hola todos!"
+    greeting: "¡Hola todos!",
   },
   environments: {
     auth: {
-      matcher: ({ labels }) => labels.find(({ name, value }) => name === "msrv" && value === "uaa"),
+      matcher: ({ labels }) =>
+        labels.find(({ name, value }) => name === "msrv" && value === "uaa"),
     },
     report: {
-      matcher: ({ labels }) => labels.find(({ name, value }) => name === "msrv" && value === "report"),
+      matcher: ({ labels }) =>
+        labels.find(({ name, value }) => name === "msrv" && value === "report"),
     },
-  }
+  },
 });
