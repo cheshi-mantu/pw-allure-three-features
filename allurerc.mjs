@@ -61,6 +61,7 @@ export default defineConfig({
         singleFile: false,
         reportLanguage: "en",
         open: false,
+        groupBy: ["epic","feature","story"],
         charts: chartLayout,
       },
     },
