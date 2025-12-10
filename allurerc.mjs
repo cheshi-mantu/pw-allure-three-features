@@ -113,7 +113,7 @@ export default defineConfig({
     },
     log: {
       options: {
-        groupBy: "feature",
+        groupBy: ["feature"],
         withTrace: false,
         allSteps: false,
       },
