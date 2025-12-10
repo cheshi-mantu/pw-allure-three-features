@@ -6,7 +6,7 @@ const {
   attachMicroservice,
   attachWrikeIssue,
   authorize,
-  getStatus
+  getStatus,
   createNewEntity,
   deleteNewEntity,
   updateEntity,
