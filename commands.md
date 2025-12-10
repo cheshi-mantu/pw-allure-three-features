@@ -53,15 +53,27 @@ allure csv --config=./allurerc.mjs allure-results
 
 ### Jira
 
-#### Add
+#### export creds
 
 ```shell
+export ALLURE_JIRA_TOKEN=$(security find-generic-password -a "$USER" -s "ALLURE_JIRA_TOKEN" -w)
+export ALLURE_JIRA_WEBHOOK=$(security find-generic-password -a "$USER" -s "ALLURE_JIRA_WEBHOOK" -w)
 ```
 
-#### Run
+#### Add an issue
 
+The execution of the tests
 
 ```shell
+pnpm allure run --config=./allurerc.mjs -- pnpm test
+
+pnpm allure jira clear --issue ARFJ-3 --reports --results
+```
+
+#### Clear results from an issue
+
+```shell
+pnpm allure jira clear --issue ARFJ-4 --reports --results
 ```
 
 #### Open
