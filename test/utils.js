@@ -153,5 +153,5 @@ module.exports = {
   createNewEntity,
   deleteNewEntity,
   updateEntity,
-  getStatus,
+  isTimeToThrow
 };

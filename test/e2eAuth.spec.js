@@ -6,7 +6,7 @@ const {
   attachMicroservice,
   attachWrikeIssue,
   authorize,
-  getStatus,
+  isTimeToThrow,
   createNewEntity,
   deleteNewEntity,
   updateEntity,
@@ -36,6 +36,7 @@ test("Login Form - Valid Credentials", async() => {
   await allure.step("Enter valid username and password", async () => {
       await allure.step("Expected Result", async () => {
           await allure.step("User is logged in successfully", async () => {
+            isTimeToThrow();  
           });
       });
   });
@@ -58,13 +59,15 @@ test("Login Form - Invalid Credentials", async() => {
   await allure.tags("web", "regress", "critical");
   await allure.step("Enter invalid username and password", async () => {
       await allure.step("Expected Result", async () => {
-          await allure.step("User sees an error message", async () => {});
+          await allure.step("User sees an error message", async () => {
+            isTimeToThrow();
+          });
       });
   });
   await allure.step("Click Continue button", async () => {
       await allure.step("Expected Result", async () => {
           await allure.step("User remains on the login page", async () => {
-            getStatus(10, 1);
+            isTimeToThrow();
           });
       });
   });
@@ -84,14 +87,14 @@ test("Login Form - Empty Fields", async() => {
   await allure.step("Leave username and password fields empty", async () => {
       await allure.step("Expected Result", async () => {
           await allure.step("User sees a validation error message", async () => {
-            getStatus(10, 1);
+            isTimeToThrow();
           });
       });
   });
   await allure.step("Click Continue button", async () => {
       await allure.step("Expected Result", async () => {
           await allure.step("User remains on the login page", async () => {
-            getStatus(10, 1);
+            isTimeToThrow();
           });
       });
   });
