@@ -6,6 +6,7 @@ const {
   attachMicroservice,
   attachWrikeIssue,
   authorize,
+  getStatus
   createNewEntity,
   deleteNewEntity,
   updateEntity,
@@ -34,7 +35,8 @@ test("Login Form - Valid Credentials", async() => {
   await allure.owner("egorivanov");
   await allure.step("Enter valid username and password", async () => {
       await allure.step("Expected Result", async () => {
-          await allure.step("User is logged in successfully", async () => {});
+          await allure.step("User is logged in successfully", async () => {
+          });
       });
   });
   await allure.step("Click Continue button", async () => {
@@ -61,7 +63,9 @@ test("Login Form - Invalid Credentials", async() => {
   });
   await allure.step("Click Continue button", async () => {
       await allure.step("Expected Result", async () => {
-          await allure.step("User remains on the login page", async () => {});
+          await allure.step("User remains on the login page", async () => {
+            getStatus(10, 1);
+          });
       });
   });
 });
@@ -79,12 +83,16 @@ test("Login Form - Empty Fields", async() => {
   await attachMicroservice("uaa");
   await allure.step("Leave username and password fields empty", async () => {
       await allure.step("Expected Result", async () => {
-          await allure.step("User sees a validation error message", async () => {});
+          await allure.step("User sees a validation error message", async () => {
+            getStatus(10, 1);
+          });
       });
   });
   await allure.step("Click Continue button", async () => {
       await allure.step("Expected Result", async () => {
-          await allure.step("User remains on the login page", async () => {});
+          await allure.step("User remains on the login page", async () => {
+            getStatus(10, 1);
+          });
       });
   });
 });
