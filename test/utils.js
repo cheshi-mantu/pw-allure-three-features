@@ -22,15 +22,15 @@ const attachMicroservice = async (val) => {
 const isTimeToThrow = () => {
   var failing = Math.random();
 
-  if (failing > 0.11 && failing < 0.92) {
+  if (failing > 0.01 && failing < 0.99) {
     throw new Error("net::ERR_CONNECTION_REFUSED");
   }
-  if (failing > 0.14 && failing < 0.95) {
+  if (failing > 0.01 && failing < 0.99) {
     throw new Error(
       "Element not found {selector: something}\n Expected: visible or transparent: visible or have css value opacity=0\n Timeout: 6000 ms"
     );
   }
-  if (failing > 0.17 && failing < 0.98) {
+  if (failing > 0.01 && failing < 0.99) {
     throw new Error("Test timeout of 30000ms exceeded.");
   }
 };
@@ -119,21 +119,23 @@ const deleteNewEntity = async (entityName) =>
     let statusOfSomething = "exists";
     await test.step(`Go to ${entityName} configuration`, async () => {
       await delay(100);
-      // isTimeToThrow();
+      isTimeToThrow();
     });
     await test.step(`Go to ${entityName} general section`, async () => {
       await delay(100);
-      // isTimeToThrow();
+      isTimeToThrow();
     });
     await test.step(`Click update ${entityName} button`, async () => {
       await delay(100);
+      isTimeToThrow();
     });
     await test.step(`Click confirm update of ${entityName} button`, async () => {
       await delay(100);
+      isTimeToThrow();
     });
     await test.step(`Check ${entityName} is updated`, async () => {
       await delay(100);
-      statusOfSomething = getStatus(5, 5);
+      statusOfSomething = getStatus(10, 1);
     });
     await expect(statusOfSomething,`check if ${entityName} exists`).toBe("absent");
   });
