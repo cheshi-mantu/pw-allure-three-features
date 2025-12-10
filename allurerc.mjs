@@ -106,15 +106,6 @@ export default defineConfig({
         layout: defaultChartsConfig,
       },
     },
-    jira: {
-      options: {
-        issue: "ARFJ-4",
-        webhook: process.env.ALLURE_JIRA_WEBHOOK,
-        token: process.env.ALLURE_JIRA_TOKEN,
-        uploadReport: true,
-        uploadResults: true,
-      },
-    },
     csv: {
       options: {
         fileName: "allure-report.csv",
