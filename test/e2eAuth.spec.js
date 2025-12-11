@@ -75,7 +75,7 @@ test("Login Form - Empty Fields", async() => {
   await allure.tags("web", "regress", "critical", "auth");
   await allure.layer("e2e");
   await allure.owner("egorivanov");
-  await allure.issue("ARFJ-3", "Related issue");
+  await allure.issue("ARFJ-4", "Related issue");
   await attachMicroservice("uaa");
   await allure.step("Leave username and password fields empty", async () => {
       await allure.step("Expected Result", async () => {
