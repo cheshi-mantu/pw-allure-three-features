@@ -64,6 +64,8 @@ export default defineConfig({
         groupBy: ["epic","feature","story"],
         charts: chartLayout,
       },
+      },
+
     dashboard: {
       options: {
         singleFile: false,
