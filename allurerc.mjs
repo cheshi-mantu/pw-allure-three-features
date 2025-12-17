@@ -58,57 +58,18 @@ export default defineConfig({
       import: "@allurereport/plugin-awesome",
       options: {
         reportName: "Very genuine fake tests, no SMS",
-        singleFile: false,
+        singleFile: true,
         reportLanguage: "en",
         open: false,
         groupBy: ["epic","feature","story"],
         charts: chartLayout,
       },
-    },
-    awesomeEpicProjects: {
-      import: "@allurereport/plugin-awesome",
-      options: {
-        reportName: "Epic Projects",
-        singleFile: false,
-        reportLanguage: "en",
-        open: false,
-        charts: chartLayout,
-        filter: ({ labels }) => labels.find(({ name, value }) => name === "epic" && value === "Projects"),
-      },
-    },
-    awesomeEpicTestCases: {
-      import: "@allurereport/plugin-awesome",
-      options: {
-        reportName: "Epic Test Cases",
-        singleFile: false,
-        reportLanguage: "en",
-        open: false,
-        charts: chartLayout,
-        filter: ({ labels }) => labels.find(({ name, value }) => name === "epic" && value === "Test Cases"),
-      },
-    },
-    awesomeJava: {
-      import: "@allurereport/plugin-awesome",
-      options: {
-        reportName: "Java Tests",
-        singleFile: false,
-        reportLanguage: "en",
-        open: false,
-        charts: chartLayout,
-        filter: ({ labels }) => labels.find(({ name, value }) => name === "language" && value === "java"),
-      },
-    },
     dashboard: {
       options: {
         singleFile: false,
         reportName: "Test run dashboard, no SMS",
         reportLanguage: "en",
         layout: defaultChartsConfig,
-      },
-    },
-    csv: {
-      options: {
-        fileName: "allure-report.csv",
       },
     },
     log: {
